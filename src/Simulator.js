@@ -35,27 +35,25 @@ class Simulator extends Component {
     })
   }
 
-  onClickPre = (state) => {
+  onClickPre = () => {
     this.setState({
-      index: state.index - 1 < 0 ? 0 : state.index - 1
+      index: this.state.index -1
      }
     );
   }
 
-  onClickPost = (state) => {
+  onClickPost = (length) => {
     this.setState({
-      index: state.index + 1 
+      index: this.state.index + 1
      }
     );
   }
 
   render() {
 
-    const data = require('./data/data.json');
+    console.log(this.state.index);
 
-    this.setState({
-      length: data.length
-    });
+    const data = require('./data/data.json');
 
     return (
       <div >
@@ -63,8 +61,8 @@ class Simulator extends Component {
           <Header style={{ height: 0.08 * window.innerHeight, backgroundColor: 'white' }}>
             <Space>
             <Space>
-              <Button type="primary" shape="circle" icon={<CaretLeftOutlined />} onClick={this.onClickPre(this.state)}/>
-              <Button type="primary" shape="circle" icon={<CaretRightOutlined />} />
+              <Button type="primary" shape="circle" icon={<CaretLeftOutlined />} onClick={this.onClickPre}/>
+              <Button type="primary" shape="circle" icon={<CaretRightOutlined />} onClick={this.onClickPost}/>
             </Space>
             <div id="font_head" align="center" style={{ fontWeight: 'bold', fontSize: '20px' }} >
               Y86-64
