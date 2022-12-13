@@ -1,0 +1,180 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pane {
+  background: #fff;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 1px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 2px #dddddd; */
+}
+
+.header {
+  background-color: #eee;
+  padding-left: 10px;
+  padding-top: 4px;
+  border-radius: 5px;
+  height: 30px;
+  font-weight: 500;
+  opacity: 1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 20px;
+}
+
+#container {
+  margin: 0 auto;
+  width: 1000px;
+  height: 500px;
+}
+
+#header {
+  height: 100px;
+  background-color: rgb(86, 86, 102);
+}
+
+#main {
+  height: 450px;
+  margin-bottom: 5px;
+}
+
+#content_reg_l {
+  float: left;
+  width: 100px;
+  height: 450px;
+  background-color: rgb(127, 127, 224);
+}
+
+#content_reg_r {
+  float: left;
+  width: 200px;
+  height: 450px;
+  background-color: rgb(127, 127, 224);
+  margin-right: 5px;
+}
+
+#content_mem {
+  float: left;
+  width: 500px;
+  height: 450px;
+  background-color: rgba(205, 205, 205, 0.945);
+
+}
+
+#content_cc_l {
+  float: right;
+  width: 60px;
+  height: 450px;
+  background-color: rgba(205, 205, 205, 0.945);
+}
+
+#content_cc_r {
+  float: right;
+  width: 130px;
+  height: 450px;
+  background-color: rgba(205, 205, 205, 0.945);
+
+}
+
+#bottom {
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+#pc {
+  float: left;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(127, 127, 224);
+}
+
+#nxt {
+  float: left;
+  width: 650px;
+  height: 40px;
+  margin-left: 5px;
+  background-color: rgb(86, 86, 102);
+}
+
+#status {
+  float: left;
+  width: 190px;
+  height: 40px;
+  margin-left: 5px;
+  background-color: rgb(86, 86, 102);
+}
+
+#footer {
+  height: 60px;
+  background-color: rgb(191, 191, 244);
+}
+
+#font_head {
+  color: rgb(99, 117, 232);
+}
+
+#font_norm {
+  position: relative;
+  left: 10px;
+  font-size: 20;
+}
+
+#file_id {
+  position: relative;
+  left: 400px;
+  font-size: 20;
+}
+
+#font_norm_2 {
+  position: relative;
+  left: 10px;
+  height: 50px;
+  font-size: 16;
+}
