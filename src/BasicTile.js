@@ -6,6 +6,9 @@ class BasicTile extends Component {
         super(props);
     }
 
+    //BasicTile实例化接受两个参数
+    //props.title是标题，如rax
+    //props.value是值，如0
     render() {
         const title = this.props.title;
         const value = this.props.value;

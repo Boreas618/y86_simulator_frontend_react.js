@@ -8,33 +8,41 @@ import BasicTile from './BasicTile';
 
 const { Content, Header } = Layout;
 
+//这是本项目的主体部分
 class Simulator extends Component {
 
   constructor(props) {
     super(props);
+    //index的值为当前是第几帧，作为一个状态（state）
     this.state = {
       index: 0
     };
   }
 
+  //生成寄存器一栏的15个寄存器
   generateRegisters = data => {
+    //Object.keys(data[this.state.index]['REG'])获得所有寄存器的名称
+    //.map()将寄存器映射到BasicTile
     return Object.keys(data[this.state.index]['REG']).map((key) => {
       return <BasicTile title={key} value={data[this.state.index]['REG'][key]}></BasicTile>
     })
   }
 
+  //生成一系列内存，同上
   generateMemory = data => {
     return Object.keys(data[this.state.index]['MEM']).map((key) => {
       return <BasicTile title={key} value={data[this.state.index]['MEM'][key]}></BasicTile>
     })
   }
 
+  //生成状态码，同上
   generateCC = data => {
     return Object.keys(data[this.state.index]['CC']).map((key) => {
       return <BasicTile title={key} value={data[this.state.index]['CC'][key]}></BasicTile>
     })
   }
 
+  //按页面顶部的"<"按钮的回调函数（即按下后执行的动作）
   onClickPre = () => {
     this.setState({
       index: this.state.index -1
@@ -42,6 +50,7 @@ class Simulator extends Component {
     );
   }
 
+  //按页面顶部的">"按钮的回调函数（即按下后执行的动作）
   onClickPost = (length) => {
     this.setState({
       index: this.state.index + 1
@@ -51,10 +60,12 @@ class Simulator extends Component {
 
   render() {
 
-    console.log(this.state.index);
-
+    //打开JSON文件
     const data = require('./data/data.json');
 
+    //主要界面
+    //<Header>是标题，引用自antd包，必须放置在布局容器<Layout>中
+    //<Content>是内容，引用自antd包，必须放置在布局容器<Layout>中
     return (
       <div >
         <Layout>
